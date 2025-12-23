@@ -1,11 +1,11 @@
 /* enlever toutes les marges internes et externes par défaut */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* UNiquement utilisé pour le responsive */
+/* Uniquement utilisé pour le responsive */
 .menu{
     display: none;
 }
@@ -66,8 +66,6 @@ nav ul li:first-child a{
     color: orange;
 }
 
-
-
 .icons_header i {
     font-size: 20px;
     margin-left: 20px;
@@ -123,7 +121,7 @@ background-size: cover; l'image prend l'entièreté de son élément parent
 /* Disposer les éléments en 4 colonnes d'une fraction */
 .Categories {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -400,7 +398,7 @@ footer p {
     }
 }
 /* Pour tous les écrans dont la largeur est inférieure ou égale à 
-1024px */
+600px */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
