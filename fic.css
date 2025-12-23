@@ -1,9 +1,11 @@
+/* enlever toutes les marges internes et externes par défaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* UNiquement utilisé pour le responsive */
 .menu{
     display: none;
 }
@@ -16,7 +18,7 @@ body {
 
 a{
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
 ul {
@@ -46,7 +48,7 @@ header {
     color: orange;
 }
 
-
+/* ALigner horizontalement la navbar avec un espacement de 30px */
 nav ul {
     display: flex;
     gap: 30px;
@@ -56,13 +58,15 @@ nav a {
     font-weight: 500;
     transition: color 0.3s;
 }
+/* Je veux qu'au survol d'une des rubriques ceux-ci prennent la couleur orange avec un temps de 0.3s */
+nav a:hover {
+    color: orange;
+}
 nav ul li:first-child a{
     color: orange;
 }
 
-nav a:hover {
-    color: orange;
-}
+
 
 .icons_header i {
     font-size: 20px;
@@ -71,11 +75,16 @@ nav a:hover {
 }
 
 /*SECTION BIENVENUE*/
+/* background-repeat: no-repeat; ne pas que l'image se répète 
+lorsqu'il n'y a plus de place
+
+background-size: cover; l'image prend l'entièreté de son élément parent  
+*/
 .Bienvenue {
     background-image: url("https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +104,7 @@ nav a:hover {
     padding: 15px 30px;
     transition: all 0.3s;
 }
-
+/* Au survol du lien on a une couleur orange plus foncée ainsi que la reduction de l'échelle (taille) */
 .Bienvenue a:hover {
     background-color: rgb(241, 117, 72);
     transform: scale(0.95);
@@ -111,16 +120,15 @@ nav a:hover {
     font-size: 32px;
     margin-bottom: 40px;
 }
-
+/* Disposer les éléments en 4 colonnes d'une fraction */
 .Categories {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) ;
     gap: 20px;
 }
 
 .Categories div {
     height: 220px;
-    background: white;
     display: flex;
     font-size: 22px;
     font-weight: bold;
@@ -129,6 +137,11 @@ nav a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.Categories div:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .Categories div:first-child{
@@ -160,10 +173,7 @@ nav a:hover {
     font-weight: 900;
 }
 
-.Categories div:hover {
-    transform: scale(1.05);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+
 
 /*ARTICLES POPULAIRES*/
 .Articles_populaires {
@@ -288,7 +298,9 @@ footer {
     color: #eee;
     padding: 40px;
 }
-
+.footer2 a{
+    color: white;
+}
 .footer1{
     background-color: rgb(30, 29, 29);
     padding: 8px 0px;
@@ -375,17 +387,20 @@ footer p {
 
 
 /*RESPONSIVE*/
+/* Pour tous les écrans dont la largeur est inférieure ou égale à 
+1024px */
 @media (max-width: 1024px) {
-.Categories, .populaires, .avis {
-    grid-template-columns: repeat(2, 1fr);
-}
+    .Categories, .populaires, .avis {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.annonce > div {
+    .annonce > div {
     flex-direction: column;
-   text-align: center;
+    text-align: center;
+    }
 }
-}
-
+/* Pour tous les écrans dont la largeur est inférieure ou égale à 
+1024px */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
