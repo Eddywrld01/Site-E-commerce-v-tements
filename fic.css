@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* ************ACCUEUIL*********** */
 /* Uniquement utilisé pour le responsive */
 .menu{
     display: none;
@@ -62,9 +63,7 @@ nav a {
 nav a:hover {
     color: orange;
 }
-nav ul li:first-child a{
-    color: orange;
-}
+
 
 .icons_header i {
     font-size: 20px;
@@ -186,30 +185,33 @@ background-size: cover; l'image prend l'entièreté de son élément parent
 
 .populaires {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
 .populaires .p1, .populaires .p2, .populaires .p3, .populaires .p4, .populaires .p5, .populaires .p6, .populaires .p7, .populaires .p8{
     border-radius: 23px;
+    
 }
-.populaires > div {
+.populaires div {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     text-align: center;
+    width: 350px;
+    margin: auto;
 }
 
 .populaires p {
     margin-bottom: 10px;
 }
 
-
+/* Tous les prix */
 .prix {
     font-weight: bold;
 }
-
-.populaires a {
+/* Tous les boutons "ajouter au panier" */
+.ajouter_au_panier {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
@@ -218,7 +220,7 @@ background-size: cover; l'image prend l'entièreté de son élément parent
     transition: transform 0.5s ,background 0.3s;
 }
 
-.populaires a:hover {
+.ajouter_au_panier:hover {
     background-color: rgb(225, 97, 51);
     transform: scale(0.9);
 }
@@ -349,6 +351,7 @@ footer a:hover {
     margin-top: 10px;
     border: none;
     font-size: 16px;
+
 }
 
 .newsletter button:hover {
@@ -385,11 +388,12 @@ footer p {
 
 
 /*RESPONSIVE*/
-/* Pour tous les écrans dont la largeur est inférieure ou égale à 
+/* Pour tous les écrans dont la largeur maximale est égale à 
 1024px */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .Categories, .populaires, .avis {
         grid-template-columns: repeat(2, 1fr);
+        margin: auto;
     }
 
     .annonce > div {
@@ -397,9 +401,9 @@ footer p {
     text-align: center;
     }
 }
-/* Pour tous les écrans dont la largeur est inférieure ou égale à 
-600px */
-@media (max-width: 600px) {
+/* Pour tous les écrans dont la largeur maximale est égale à 
+767px */
+@media screen and (max-width: 767px) {
     header {
         flex-direction: column;
         gap: 20px;
@@ -422,6 +426,7 @@ footer p {
     .footer1,
     .footer2 {
         grid-template-columns: 1fr;
+        margin: auto;
     }
 
     .Bienvenue {
@@ -433,3 +438,97 @@ footer p {
         font-size: 32px;
     }
 }
+
+/* ***********BOUTIQUE************* */
+/* FILTRES */
+.filtre ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid;
+}
+
+.filtre ul a:hover{
+    color: orange;
+}
+.filtre .sous-cat{
+    display: none;
+    flex-direction: column;
+    border: 1px solid;
+}
+
+/* GALERIE DE LA BOUTIQUE */
+.main-boutique{
+    padding: 80px 60px;
+}
+
+.main-boutique h2{
+    margin-bottom: 18px;
+}
+
+.contenu_galerie{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contenu_galerie div{
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    border-radius: 23px;
+}
+
+
+.def{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 33px;
+}
+.def p:nth-child(3){
+    border: 1px solid;
+    padding: 9px;
+}
+
+/* GALERIE HOMME */
+.contenu_categories{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 60px;
+    
+}
+.galerie h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 39px;
+}
+.galerie h2{
+    font-size: 40px;
+    padding: 10px;
+}
+/* HAUTS, BAS, TENUES & STYLES, VESTES & MANTEAUX */
+.contenu_categories .Hauts, .contenu_categories .Bas, .contenu_categories .Tenues_Styles, .contenu_categories .Vestes_Manteaux{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.contenu_categories .Hauts div, .contenu_categories .Bas div, .contenu_categories .Tenues_Styles div, .contenu_categories .Vestes_Manteaux div{
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    border-radius: 23px
+}
+/* BAS */
+
