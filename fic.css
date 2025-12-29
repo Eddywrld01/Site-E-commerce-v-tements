@@ -441,23 +441,74 @@ footer p {
 
 /* ***********BOUTIQUE************* */
 /* FILTRES */
-.filtre ul{
+/* Stabiliser le filtre en haut */
+.filtre .cat{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 25px;
+    gap: 80px;
     border: 1px solid;
+    border-radius: 10px;
+    height: 39px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: none;
+    background-color: #d16c0e;
+    position: fixed;
+    left: 460px;
+    z-index: 100;
 }
 
-.filtre ul a:hover{
-    color: orange;
+
+.filtre .cat .cat2{
+    position: relative;
+    padding: 10px 0;
 }
+.filtre .cat .cat3{
+    position: relative;
+    padding: 10px 0;
+}
+.filtre .cat .cat4{
+    position: relative;
+    padding: 10px 0;
+}
+.filtre .cat a:hover{
+    color: white;
+}
+
+
+
+.filtre .cat2:hover .sous-cat{
+    display: block;
+}
+.filtre .cat3:hover .sous-cat{
+    display: block;
+}
+.filtre .cat4:hover .sous-cat{
+    display: block;
+}
+
+/* Mettre toutes les sous-catégories en position relative pour pouvoir se positionner par rapport à leur élément parent */
 .filtre .sous-cat{
     display: none;
     flex-direction: column;
-    border: 1px solid;
+    position: absolute;
+    top: 100%;
+    padding: 20px 10px;
+    line-height: 30px;
+    background-color: #d16c0e;
+    border-top: 3px solid #f8f8f8;
+    width: 200px;
+    transition: all 0.3s;
+    border-radius: 10px;
 }
-
+.filtre .sous-cat li{
+    transition: transform 0.375s linear;
+}
+.filtre .sous-cat li:hover{
+    transform: translateX(7px);
+}
 /* GALERIE DE LA BOUTIQUE */
 .main-boutique{
     padding: 80px 60px;
@@ -471,16 +522,21 @@ footer p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    background-color: #fdfdfd;
+    border-radius: 18px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
+
 
 .contenu_galerie div{
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 15px;
     text-align: center;
-    width: 350px;
-    margin: auto;
-    border-radius: 23px;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 
@@ -501,34 +557,68 @@ footer p {
 
 /* GALERIE HOMME */
 .contenu_categories{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 60px;
-    
+    background-color: #fdfdfd;
+    border-radius: 18px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-.galerie h3{
-    text-align: center;
-    padding: 20px;
-    font-size: 39px;
-}
-.galerie h2{
+
+.galerie h2 {
     font-size: 40px;
-    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    letter-spacing: 3px;
 }
+
+.galerie h3 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    position: relative;
+}
+/* Mettre une barre spéciale en bas de chaque titre de section */
+.galerie h3::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: orange;
+    display: block;
+    margin:  auto ;
+    border-radius: 2px;
+}
+
+
 /* HAUTS, BAS, TENUES & STYLES, VESTES & MANTEAUX */
+/* Mettre les éléments en grille et répéter un modèle de colonne qui a minimum : 220px et maixmum 1fr (fraction de l'espace disponible).
+Avec "auto-fit" le navigateur calcule automatiquement combien de colonnes peuvent tenir dans une largeur d'écran
+*/
 .contenu_categories .Hauts, .contenu_categories .Bas, .contenu_categories .Tenues_Styles, .contenu_categories .Vestes_Manteaux{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 30px;
 }
-.contenu_categories .Hauts div, .contenu_categories .Bas div, .contenu_categories .Tenues_Styles div, .contenu_categories .Vestes_Manteaux div{
+
+/* Redimensionner l'image */
+.contenu_categories .Hauts img, .contenu_categories .Bas img, .contenu_categories .Tenues_Styles img, .contenu_categories .Vestes_Manteaux img{
+    height: 400px;
+    width: 100%;
+}
+
+.contenu_categories div{
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 15px;
     text-align: center;
-    width: 300px;
-    margin: auto;
-    border-radius: 23px
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
-/* BAS */
+
+.Hauts div:hover, .Bas div:hover, .Tenues_Styles div:hover, .Vestes_Manteaux div:hover {
+    transform: translateY(-7px);
+}
+
 
