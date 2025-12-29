@@ -386,7 +386,9 @@ footer p {
     text-align: center;
 }
 
-
+footer img{
+    width: 150px;
+}
 /*RESPONSIVE*/
 /* Pour tous les écrans dont la largeur maximale est égale à 
 1024px */
@@ -622,3 +624,163 @@ Avec "auto-fit" le navigateur calcule automatiquement combien de colonnes peuven
 }
 
 
+/* PAGE DE CONNEXION */
+.connexion{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.connexion form{
+    padding: 50px;
+    border: 3px solid orange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 17px;
+}
+.connexion form h2{
+    text-align: center;
+    font-size: 30px;
+}
+.connexion form p{
+    text-align: center;
+}
+.connexion form a{
+    color: orange;
+}
+.input-connexion{
+    margin: 25px 0px;
+    line-height: 30px;
+}
+.input-connexion input{
+    outline: none;
+    padding: 5px;
+    width: 95%;
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.input-connexion input::placeholder{
+    font-size: 15px;
+}
+
+.connexion button{
+    padding: 9px;
+    width: 95%;
+    font-size: 17px;
+    background-color: orange;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.connexion button:hover{
+    color: white;
+}
+
+/* PAGE D'INSCRIPTION */
+/* Même mise en forme que celle de la page connexion */
+.inscription{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inscription form{
+    padding: 50px;
+    border: 3px solid orange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 17px;
+}
+.inscription form h2{
+    text-align: center;
+    font-size: 30px;
+}
+.inscription form p{
+    text-align: center;
+}
+.inscription form a{
+    color: orange;
+}
+.input-inscription{
+    margin: 25px 0px;
+    line-height: 30px;
+}
+.input-inscription input{
+    outline: none;
+    padding: 5px;
+    width: 95%;
+    border: 1px solid gray;
+    border-radius: 9px;
+}
+
+.input-inscription input::placeholder{
+    font-size: 15px;
+}
+.input-inscription input{
+    margin-bottom: 10px;
+}
+.inscription button{
+    padding: 9px;
+    width: 95%;
+    font-size: 17px;
+    background-color: orange;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.inscription button:hover{
+    color: white;
+}
+
+/* INFORMATIONS / À PROPOS */
+.main_A_propos,#A_propos{
+    padding:  60px;
+}
+.main_A_propos h2{
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#A_propos{
+    text-align: center;
+}
+.main_A_propos p{
+    font-size: 18px;
+}
+.main_A_propos span{
+    font-weight: bold;
+}
+
+#Partenaires .logo_partenaires img{
+    width: 80px;
+    height: 30px;
+}
+.FAQ{
+    padding: 60px;
+}
+.FAQ{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.main_A_propos button{
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.main_A_propos button:hover{
+    color: white;
+}
