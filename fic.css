@@ -773,14 +773,91 @@ Avec "auto-fit" le navigateur calcule automatiquement combien de colonnes peuven
     gap: 60px;
 }
 
-.main_A_propos button{
-    background-color: orange;
-    padding: 10px 20px;
-    border-radius: 11px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
+.main_A_propos a{
+    color: orange;
 }
-.main_A_propos button:hover{
+
+.FAQ div{
+    border: 1px solid orange;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* CONTACT */
+
+
+.contact{
+    min-width: 320px;
+    width: 30%;
+    margin: auto;
+}
+
+.presentation{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_contact{
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form_contact h2, .form_contact p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.form_contact label{ 
+    display: block;
+    margin-top: 15px;
+}
+.form_contact textarea{
+    resize: vertical;
+}
+
+
+.form_contact input,
+.form_contact select,
+.form_contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox input{
+    width: 10px;
+}
+.contact button{
+    width: 100%;
+    padding: 8px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover{
     color: white;
 }
+
+.info_contact{
+ text-align: center;
+}
+.info_contact a{
+    color: rgb(255, 166, 0);
+    font-weight: bold;
+}
+
+
