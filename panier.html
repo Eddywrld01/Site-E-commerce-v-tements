@@ -32,7 +32,7 @@
             <ul>
                 <li><a href="accueil.html">Accueil</a></li>
                 <li><a href="Boutique.html">Boutique</a></li>
-                <li><a href="Informations.html  ">À propos</a></li>
+                <li><a href="Informations.html">À propos</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Presentation.html">Presentation</a></li>
             </ul>
@@ -42,41 +42,52 @@
             <a href="connexion.html"><i class="fa-regular fa-user"></i></a>
         </div>
     </header>
-    <main class="main_A_propos">
-        <section id="A_propos">
-            <h2>À Propos de Nous</h2>
-            <p>KOBYT est une  entreprise qui opère  dans le textile , plus précisément  dans la vente et la commercialisation  de vêtements locaux au territoire ivoirien et occidental de tous les types hommes femmes et enfants , des articles  créatifs et modernes.</p>
-            <section id="Partenaires">
-                <p>KOBYT signe des partenariats avec plusieurs maisons de créations ivoiriens tels que <span>k10shop, Wearify, Edstyle</span> et étrangers tels que <span>Nike et Puma</span>. </p>
-                <div class="logo_partenaires">
-                  <img src="dos/Partenaires/PUMA_idZScXivAN_1.png" alt="Logo Puma">
-                  <img src="dos/Partenaires/002-nike-logos-swoosh-white.jpg" alt="">
-                </div>
-            </section>
-        </section>
-        <h2>FAQ</h2>
-        <section class="FAQ">
-            <div class="Question1">
-                <h3>Comment passer une commande ?</h3>
-                <ul>
-                    <li><p>*Choisir un article.</p></li>
-                    <li><p>*Cliquez sur le bouton acheter.</p> </li>
-                    <li><p>*Inscrivez-vous ou connectez-vous à votre compte à partir de cet icône (<i class="fa-regular fa-user"></i>) se trouvant dans l'en-tête.</p></li>
-                    <li><p>*Validez la commande à partir de votre mode de paiement et achetez.</p></li>
+    <main class="produit-page">
+
+        <section class="produit-details">
+            <div class="produit-image">
+                <img src="images/tshirt1.jpg" alt="T-shirt KOBYT">
+            </div>
+
+            <div class="produit-info">
+                <h1>T-shirt KOBYT Classique</h1>
+                <p class="prix">15 000 FCFA</p>
+
+                <p class="description">
+                    Le T-shirt KOBYT est conçu avec un coton de haute qualité,
+                    offrant confort, durabilité et style. Idéal pour un usage
+                    quotidien ou pour affirmer votre identité.
+                </p>
+
+                <ul class="caracteristiques">
+                    <li>✔ 100 % coton premium</li>
+                    <li>✔ Coupe moderne</li>
+                    <li>✔ Impression résistante</li>
+                    <li>✔ Disponible du S au XL</li>
                 </ul>
-            </div>
-            <div class="Question2">
-                <h3>On paie à la livraison ?</h3>
-                <p>Pour plus de sécurité et de professionalisme KOBYT consoit le paiement en ligne.</p>
-            </div>
-            <div class="Question3">
-                <h3>En cas de délai de livraison dépassé ?</h3>
-                <p>Il vous est démandé de le signaler 24h après pour procéder à une enquête et une restauration immédiate de l'article.</p>
+
+                <form action="panier.html">
+                    <label for="taille">Taille :</label>
+                    <select id="taille" required>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+
+                    <label for="quantite">Quantité :</label>
+                    <input type="number" id="quantite" value="1" min="1">
+
+                    <button type="submit" class="btn-panier">
+                        Ajouter au panier
+                    </button>
+                </form>
             </div>
         </section>
-        <p>Pour d'autres questions veuillez vous rediriger vers la page de <a href="Contact.html">contact</a>.</p>
-        
+
+
     </main>
+
     <footer>
         <div class="footer1">
             <div class="nom_site">
@@ -95,7 +106,7 @@
                 <br>
                 <button type="submit">J'accepte les conditions légales</button>
             </div>
-           
+            
         </div>
         <div class="footer2">
             <div class="f-boutique">
